@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelacak Fase Pasar Bitcoin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pelacak Fase Pasar Bitcoin</h1>
+            <p class="subtitle">Pantau siklus pasar Bitcoin historis dan prediksi</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="year">Tahun:</label>
+                <select id="year">
+                    <!-- Tahun akan diisi oleh JavaScript -->
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="quarter">Kuartal:</label>
+                <select id="quarter">
+                    <option value="Q1">Q1</option>
+                    <option value="Q2">Q2</option>
+                    <option value="Q3">Q3</option>
+                    <option value="Q4">Q4</option>
+                </select>
+            </div>
+
+            <button id="check-phase">Cek Fase</button>
+        </div>
+
+        <div class="result-container">
+            <div id="phase-display" class="hidden">
+                <div class="phase-header">
+                    <h2 id="phase-title">Fase Pasar</h2>
+                    <div id="phase-icon"></div>
+                </div>
+                <p id="phase-description"></p>
+                <div id="price-indicator">
+                    <div class="price-movement">
+                        <span id="price-direction-icon"></span>
+                        <span id="price-direction-text"></span>
+                    </div>
+                    <div class="volatility">
+                        <span id="volatility-icon"></span>
+                        <span id="volatility-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>Tentang Fase Bitcoin</h3>
+            <div class="phase-info-grid">
+                <div class="phase-info bullrun">
+                    <h4>Bull Run</h4>
+                    <p>Kenaikan harga cepat, optimisme tinggi, FOMO muncul</p>
+                </div>
+                <div class="phase-info bear">
+                    <h4>Bear Market</h4>
+                    <p>Penurunan harga berkepanjangan, pesimisme mendominasi</p>
+                </div>
+                <div class="phase-info halving">
+                    <h4>Halving</h4>
+                    <p>Hadiah blok dipotong setengah, penurunan pasokan baru</p>
+                </div>
+                <div class="phase-info accumulation">
+                    <h4>Akumulasi</h4>
+                    <p>Pergerakan sideways, akumulasi oleh smart money</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pelacak Fase Pasar Bitcoin &copy; <span id="current-year"></span> | Alat Edukasi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
